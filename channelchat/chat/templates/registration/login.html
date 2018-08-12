@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form method="post" id="msform">
+	{% csrf_token %}
+	<fieldset>
+		 {{ form.as_p }}
+	<input type="submit" class="next action-button" value="Submit" />
+	</fieldset>
+	{{message}}
+</form>
+
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form id="msform" method="post">
+{% csrf_token %}
+  <fieldset>
+    <h2 class="fs-title">Create your channel</h2>
+    {{ form.as_p }}
+    <input type="submit" name="next" class="next action-button" value="Submit" />
+  </fieldset>
+</form>
+{% endblock %}
